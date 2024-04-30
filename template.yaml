@@ -8,6 +8,7 @@ Resources:
     Type: 'AWS::S3::Bucket'
     # checkov:skip=CKV_AWS_18:Ensure the S3 bucket has access logging enabled
     Properties:
+      BucketName: !Ref S3BucketName
       VersioningConfiguration:
         Status: Enabled
       PublicAccessBlockConfiguration:
