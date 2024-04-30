@@ -9,11 +9,20 @@ permissions: read-all
 jobs:
   test:
     runs-on: ubuntu-latest
+    environment: taskcat
     steps:
       - uses: actions/checkout@v4.1.4
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.8'
+      - name: Configure AWS credentials
+        id: creds
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-west-2
+
       - name: TaskCat
         run: bash .automation/taskcat.sh
