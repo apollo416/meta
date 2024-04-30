@@ -1,3 +1,8 @@
+Parameters:
+  S3BucketName:
+    Type: String
+    Description: The bucket name
+
 Resources:
   HelloBucket:
     Type: 'AWS::S3::Bucket'
