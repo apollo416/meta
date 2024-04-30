@@ -1,0 +1,13 @@
+project:
+  name: meta-taskcat-ci
+  shorten_stack_name: true
+  package_lambda: true
+  #lambda_source_path: functions/source
+  #lambda_zip_path: functions/packages
+  template: template.yaml
+  regions:
+    - us-west-2
+tests:
+  taskcat-ci:
+    regions:
+      - us-west-2
