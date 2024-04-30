@@ -5,9 +5,14 @@ project:
   #lambda_source_path: functions/source
   #lambda_zip_path: functions/packages
   template: template.yaml
+  artifact_regions:
+  - us-west-2
   regions:
   - us-west-2
+
 tests:
   taskcat-ci:
+    artifact_regions:
+    - us-west-2
     regions:
     - us-west-2
