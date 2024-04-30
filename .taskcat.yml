@@ -3,6 +3,7 @@ project:
   shorten_stack_name: true
   package_lambda: false
   s3_regional_buckets: true
+  s3_bucket: ''
 
 tests:
   taskcat-ci:
@@ -11,3 +12,4 @@ tests:
     - us-west-2
     parameters:
       S3BucketName: $[taskcat_autobucket]
+    s3_bucket: ''
