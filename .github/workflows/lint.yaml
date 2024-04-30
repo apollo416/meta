@@ -1,4 +1,4 @@
-name: CloudFormation Linter
+name: CNF
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 permissions: read-all
 
 jobs:
-  cloudformation-linter:
+  linter:
     runs-on: ubuntu-latest
 
     steps:
