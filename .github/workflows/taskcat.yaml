@@ -1,0 +1,19 @@
+name: TaskCat
+
+on:
+  push:
+    branches: ["main"]
+
+permissions: read-all
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.1.4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+      - name: TaskCat
+        run: bash .automation/taskcat.sh
