@@ -7,8 +7,6 @@ project:
 tests:
   taskcat-ci:
     template: template.yaml
-    artifact_regions:
-    - us-west-2
     regions:
     - us-west-2
     parameters:
