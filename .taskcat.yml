@@ -3,13 +3,9 @@ project:
   shorten_stack_name: true
   package_lambda: false
   s3_regional_buckets: true
-  s3_bucket: ''
 
 tests:
   taskcat-ci:
     template: template.yaml
     regions:
     - us-west-2
-    parameters:
-      S3BucketName: akjdsfhaksdjfha98798873
-    s3_bucket: ''
