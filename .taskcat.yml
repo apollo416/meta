@@ -6,8 +6,8 @@ project:
   #lambda_zip_path: functions/packages
   template: template.yaml
   regions:
-    - us-west-2
+  - us-west-2
 tests:
   taskcat-ci:
     regions:
-      - us-west-2
+    - us-west-2
