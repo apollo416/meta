@@ -1,0 +1,20 @@
+name: Lint CloudFormation Templates
+
+on:
+  push:
+    branches: ["main"]
+
+permissions: read-all
+
+jobs:
+  cloudformation-linter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Testing with CFN Lint Command
+        uses: scottbrenner/cfn-lint-action@v2
+        with:
+          command: cfn-lint -t ./template.yml
