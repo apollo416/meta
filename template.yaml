@@ -1,7 +1,7 @@
 Resources:
-  # checkov:skip=CKV_AWS_18:Ensure the S3 bucket has access logging enabled
   HelloBucket:
     Type: 'AWS::S3::Bucket'
+    # checkov:skip=CKV_AWS_18:Ensure the S3 bucket has access logging enabled
     Properties:
       VersioningConfiguration:
         Status: Enabled
