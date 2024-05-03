@@ -2,8 +2,6 @@ name: CNF
 
 on:
   pull_request:
-    branches-ignore:
-      - main
 
 permissions: read-all
 
