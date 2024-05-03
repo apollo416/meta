@@ -2,8 +2,6 @@ name: TaskCat
 
 on:
   pull_request:
-    branches-ignore:
-      - main
   workflow_dispatch:
 
 permissions: read-all
