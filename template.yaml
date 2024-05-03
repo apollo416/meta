@@ -12,4 +12,7 @@ Resources:
         RestrictPublicBuckets: true
   CognitoUserPool:
     Type: AWS::Cognito::UserPool
-    
+    AccountRecoverySetting:
+      RecoveryMechanisms:
+        - Name: verified_email
+          Priority: 1
